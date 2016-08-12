@@ -10,7 +10,7 @@
 
 	<mvc:annotation-driven />
 
-
+	<import resource="classpath:spring/spring-config-servlet.xml"></import>
 
 
 </beans>
