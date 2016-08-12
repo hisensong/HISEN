@@ -1,4 +1,4 @@
-package com.dmall.hisen.service;
+package com.dmall.hisen.service.impl;
 
 /**
  * Description:
