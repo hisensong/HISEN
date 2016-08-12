@@ -24,6 +24,12 @@
           <element id="archive" name="hisen-domain-1.0.1.jar">
             <element id="module-output" name="hisen-domain" />
           </element>
+          <element id="archive" name="hisen-service-1.0.1.jar">
+            <element id="module-output" name="hisen-service" />
+          </element>
+          <element id="archive" name="hisen-common-1.0.1.jar">
+            <element id="module-output" name="hisen-common" />
+          </element>
         </element>
       </element>
       <element id="directory" name="META-INF">

@@ -9,7 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hisen-common</artifactId>
 
+    <groupId>com.dmall</groupId>
+    <artifactId>hisen-common</artifactId>
+    <version>1.0.1</version>
 
 </project>

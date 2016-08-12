@@ -27,6 +27,7 @@
             <artifactId>jackson-databind</artifactId>
             <version>${jackson-databind.version}</version>
         </dependency>
+
         <!--spring-->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -37,11 +38,29 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
         </dependency>
+
+
         <dependency>
             <groupId>com.dmall</groupId>
             <artifactId>hisen-domain</artifactId>
             <version>1.0.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.dmall</groupId>
+            <artifactId>hisen-service</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dmall</groupId>
+            <artifactId>hisen-domain</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dmall</groupId>
+            <artifactId>hisen-common</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
 
 
     </dependencies>

@@ -1,5 +1,7 @@
 package com.dmall.hisen.service;
 
+import com.dmall.hisen.domain.User;
+
 /**
  * Description:
  * Company:国美小额贷款有限公司
@@ -8,4 +10,8 @@ package com.dmall.hisen.service;
  */
 
 public interface UserService {
+
+     User findOne(User user);
+
+     int update(User user);
 }
