@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="hisen-webapp:war">
+    <output-path>$PROJECT_DIR$/hisen-webapp/target</output-path>
+    <root id="archive" name="hisen-webapp.war">
+      <element id="artifact" artifact-name="hisen-webapp:war exploded" />
+    </root>
+  </artifact>
+</component>
