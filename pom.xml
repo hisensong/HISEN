@@ -12,8 +12,8 @@
         <module>hisen-webapp</module>
         <module>hisen-service</module>
         <module>hisen-domain</module>
-        <module>hisen-dao</module>
         <module>hisen-common</module>
+        <module>hisen-dao</module>
     </modules>
 
     <properties>
