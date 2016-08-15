@@ -14,6 +14,8 @@
         <module>hisen-domain</module>
         <module>hisen-common</module>
         <module>hisen-dao</module>
+        <module>hisen-base</module>
+        <module>hisen-db</module>
     </modules>
 
     <properties>

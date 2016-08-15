@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!-- recommended not modified but can be added ,Please contact liuhuiqing@jd.com for good advice.-->
+<mapper namespace="studentMapper">
+	<resultMap id="studentMap" type="com.dmall.hisen.domain.entity.StudentEntity">
+		<result column="id" property="id" jdbcType="BIGINT" javaType="java.math.BigInteger"/>
+		<result column="name" property="name" jdbcType="VARCHAR" javaType="String"/>
+		<result column="age" property="age" jdbcType="INTEGER" javaType="Integer"/>
+		<result column="sex" property="sex" jdbcType="CHAR" javaType="String"/>
+		<result column="sysVersion" property="sysVersion" jdbcType="INTEGER" javaType="Integer"/>
+		<result column="createTime" property="createTime" jdbcType="DATE" javaType="java.util.Date"/>
+		<result column="updateTime" property="updateTime" jdbcType="DATE" javaType="java.util.Date"/>
+		<result column="createUser" property="createUser" jdbcType="VARCHAR" javaType="String"/>
+		<result column="updateUser" property="updateUser" jdbcType="VARCHAR" javaType="String"/>
+		<result column="yn" property="yn" jdbcType="INTEGER" javaType="Integer"/>
+		<result column="ts" property="ts" jdbcType="DATE" javaType="java.util.Date"/>
+	</resultMap>
+    
+    <sql id="select-all-column">
+		SELECT
+			id AS id,
+			name AS name,
+			age AS age,
+			sex AS sex,
+			sysVersion AS sysVersion,
+			createTime AS createTime,
+			updateTime AS updateTime,
+			createUser AS createUser,
+			updateUser AS updateUser,
+			yn AS yn,
+			ts AS ts
+		FROM student
+	</sql>
+	
+	<sql id="where-all-condition">
+		1=1 
+		<if test="id != null and id != ''">
+			and id = #{id,jdbcType=BIGINT}
+		</if>
+		<if test="name != null and name != ''">
+			and name = #{name,jdbcType=VARCHAR}
+		</if>
+		<if test="age != null and age != ''">
+			and age = #{age,jdbcType=INTEGER}
+		</if>
+		<if test="sex != null and sex != ''">
+			and sex = #{sex,jdbcType=CHAR}
+		</if>
+		<if test="sysVersion != null and sysVersion != ''">
+			and sysVersion = #{sysVersion,jdbcType=INTEGER}
+		</if>
+		<if test="createTime != null and createTime != ''">
+			and createTime = #{createTime,jdbcType=DATE}
+		</if>
+		<if test="updateTime != null and updateTime != ''">
+			and updateTime = #{updateTime,jdbcType=DATE}
+		</if>
+		<if test="createUser != null and createUser != ''">
+			and createUser = #{createUser,jdbcType=VARCHAR}
+		</if>
+		<if test="updateUser != null and updateUser != ''">
+			and updateUser = #{updateUser,jdbcType=VARCHAR}
+		</if>
+		<if test="yn != null and yn != ''">
+			and yn = #{yn,jdbcType=INTEGER}
+		</if>
+		<if test="ts != null and ts != ''">
+			and ts = #{ts,jdbcType=DATE}
+		</if>
+	</sql>
+	
+	<select id="selectStudent" parameterType="com.dmall.hisen.domain.entity.StudentEntity" resultMap="studentMap">
+		<include refid="select-all-column"/>
+		<where>
+		<include refid="where-all-condition"/>
+		<include refid="commonRoadMapper.sortSql"/>
+		<include refid="commonRoadMapper.pagingLimit"/>
+		</where>
+	</select>
+	
+	<select id="selectOneStudent" parameterType="java.lang.Long" resultMap="studentMap">
+		<include refid="select-all-column"/>
+		WHERE
+		id = #{id,jdbcType=BIGINT}
+	</select>
+	
+	<select id="countStudent" parameterType="com.dmall.hisen.domain.entity.StudentEntity" resultType="java.lang.Integer">
+		SELECT COUNT(*) FROM student
+		<where>
+		<include refid="where-all-condition"/>
+		</where>
+	</select>
+	
+	<insert id="insertStudent" parameterType="com.dmall.hisen.domain.entity.StudentEntity" useGeneratedKeys="true" keyProperty="id">
+	INSERT INTO student (
+	<if test="name != null">
+		name,
+	</if>
+	<if test="age != null">
+		age,
+	</if>
+	<if test="sex != null">
+		sex,
+	</if>
+	<if test="sysVersion != null">
+		sysVersion,
+	</if>
+	<if test="createTime != null">
+		createTime,
+	</if>
+	<if test="updateTime != null">
+		updateTime,
+	</if>
+	<if test="createUser != null">
+		createUser,
+	</if>
+	<if test="updateUser != null">
+		updateUser,
+	</if>
+	<if test="yn != null">
+		yn,
+	</if>
+		create_time,
+		update_time,
+		ts
+	) VALUES (
+    <if test="name != null">
+    	#{name,jdbcType=VARCHAR},
+    </if>
+    <if test="age != null">
+    	#{age,jdbcType=INTEGER},
+    </if>
+    <if test="sex != null">
+    	#{sex,jdbcType=CHAR},
+    </if>
+    <if test="sysVersion != null">
+    	#{sysVersion,jdbcType=INTEGER},
+    </if>
+    <if test="createTime != null">
+    	#{createTime,jdbcType=DATE},
+    </if>
+    <if test="updateTime != null">
+    	#{updateTime,jdbcType=DATE},
+    </if>
+    <if test="createUser != null">
+    	#{createUser,jdbcType=VARCHAR},
+    </if>
+    <if test="updateUser != null">
+    	#{updateUser,jdbcType=VARCHAR},
+    </if>
+    <if test="yn != null">
+    	#{yn,jdbcType=INTEGER},
+    </if>
+		now(),
+		now(),
+		now()
+	)
+	</insert>
+	
+	<insert id="insertStudentBatch" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
+	<selectKey resultType="long" keyProperty="id" order="AFTER">
+		SELECT
+		LAST_INSERT_ID()
+	</selectKey>
+	INSERT INTO student (
+		name,
+		age,
+		sex,
+		sysVersion,
+		createTime,
+		updateTime,
+		createUser,
+		updateUser,
+		yn,
+		create_time,
+		update_time,
+		ts
+	) VALUES
+	<foreach collection="list" item="item" index="index" separator=",">
+    (
+		#{item.name,jdbcType=VARCHAR},
+		#{item.age,jdbcType=INTEGER},
+		#{item.sex,jdbcType=CHAR},
+		#{item.sysVersion,jdbcType=INTEGER},
+		#{item.createTime,jdbcType=DATE},
+		#{item.updateTime,jdbcType=DATE},
+		#{item.createUser,jdbcType=VARCHAR},
+		#{item.updateUser,jdbcType=VARCHAR},
+		#{item.yn,jdbcType=INTEGER},
+		now(),
+		now(),
+		now()
+			)
+	</foreach>
+	</insert>
+	
+	<update id="updateStudent" parameterType="java.util.Map">
+		UPDATE student
+		<set>
+    	<if test="name != null">
+            name = #{name,jdbcType=VARCHAR},
+    	</if>
+    	<if test="age != null">
+            age = #{age,jdbcType=INTEGER},
+    	</if>
+    	<if test="sex != null">
+            sex = #{sex,jdbcType=CHAR},
+    	</if>
+    	<if test="sysVersion != null">
+            sysVersion = #{sysVersion,jdbcType=INTEGER},
+    	</if>
+    	<if test="createTime != null">
+            createTime = #{createTime,jdbcType=DATE},
+    	</if>
+    	<if test="updateTime != null">
+            updateTime = #{updateTime,jdbcType=DATE},
+    	</if>
+    	<if test="createUser != null">
+            createUser = #{createUser,jdbcType=VARCHAR},
+    	</if>
+    	<if test="updateUser != null">
+            updateUser = #{updateUser,jdbcType=VARCHAR},
+    	</if>
+    	<if test="yn != null">
+            yn = #{yn,jdbcType=INTEGER},
+    	</if>
+        sys_version = sys_version + 1,
+        update_time =now(),
+        ts=now()
+		</set>
+		WHERE 
+		id = #{id,jdbcType=BIGINT}
+	</update>
+	
+	<update id="updateStudentBatch"  parameterType="java.util.List">
+	<foreach collection="list" item="item" index="index" open="" close="" separator=";">
+		update student 
+		<set>
+		<if test="item.name != null">
+			name = #{item.name,jdbcType=VARCHAR},
+		</if>
+		<if test="item.age != null">
+			age = #{item.age,jdbcType=INTEGER},
+		</if>
+		<if test="item.sex != null">
+			sex = #{item.sex,jdbcType=CHAR},
+		</if>
+		<if test="item.sysVersion != null">
+			sysVersion = #{item.sysVersion,jdbcType=INTEGER},
+		</if>
+		<if test="item.createTime != null">
+			createTime = #{item.createTime,jdbcType=DATE},
+		</if>
+		<if test="item.updateTime != null">
+			updateTime = #{item.updateTime,jdbcType=DATE},
+		</if>
+		<if test="item.createUser != null">
+			createUser = #{item.createUser,jdbcType=VARCHAR},
+		</if>
+		<if test="item.updateUser != null">
+			updateUser = #{item.updateUser,jdbcType=VARCHAR},
+		</if>
+		<if test="item.yn != null">
+			yn = #{item.yn,jdbcType=INTEGER},
+		</if>
+		sys_version = sys_version + 1,
+		update_time =now(),
+		ts=now()
+		</set>
+		WHERE 
+		id = #{item.id,jdbcType=BIGINT}
+
+	</foreach>
+	</update>
+	
+	<delete id="deleteStudent" parameterType="com.dmall.hisen.domain.entity.StudentEntity">
+		DELETE FROM student
+		WHERE 
+		<include refid="where-all-condition"/>
+	</delete>
+	
+	<delete id="deleteOneStudent" parameterType="java.lang.Long">
+		DELETE FROM student
+		WHERE
+		id = #{id,jdbcType=BIGINT}
+	</delete>
+</mapper>

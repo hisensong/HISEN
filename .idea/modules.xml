@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/hisen.iml" filepath="$PROJECT_DIR$/hisen.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-common/hisen-common.iml" filepath="$PROJECT_DIR$/hisen-common/hisen-common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hisen-dao/hisen-dao.iml" filepath="$PROJECT_DIR$/hisen-dao/hisen-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hisen-db/hisen-db.iml" filepath="$PROJECT_DIR$/hisen-db/hisen-db.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-domain/hisen-domain.iml" filepath="$PROJECT_DIR$/hisen-domain/hisen-domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-service/hisen-service.iml" filepath="$PROJECT_DIR$/hisen-service/hisen-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-webapp/hisen-webapp.iml" filepath="$PROJECT_DIR$/hisen-webapp/hisen-webapp.iml" />
