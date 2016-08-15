@@ -47,6 +47,11 @@
             <artifactId>mybatis-spring</artifactId>
             <version>${mybatis-spring.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.dmall</groupId>
+            <artifactId>hisen-base</artifactId>
+            <version>1.0.1</version>
+        </dependency>
 
 
     </dependencies>

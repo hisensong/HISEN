@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/hisen.iml" filepath="$PROJECT_DIR$/hisen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hisen-base/hisen-base.iml" filepath="$PROJECT_DIR$/hisen-base/hisen-base.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-common/hisen-common.iml" filepath="$PROJECT_DIR$/hisen-common/hisen-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-db/hisen-db.iml" filepath="$PROJECT_DIR$/hisen-db/hisen-db.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-domain/hisen-domain.iml" filepath="$PROJECT_DIR$/hisen-domain/hisen-domain.iml" />
