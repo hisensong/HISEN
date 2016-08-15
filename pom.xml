@@ -13,8 +13,6 @@
         <module>hisen-service</module>
         <module>hisen-domain</module>
         <module>hisen-common</module>
-        <module>hisen-dao</module>
-        <module>hisen-base</module>
         <module>hisen-db</module>
     </modules>
 
@@ -33,6 +31,9 @@
         <commons-fileupload.version>1.2.1</commons-fileupload.version>
         <mysql.version>5.1.34</mysql.version>
         <fastjson.version>1.2.7</fastjson.version>
+        <dbcp.version>1.4</dbcp.version>
+        <mybatis.version>3.2.7</mybatis.version>
+        <mybatis-spring.version>1.2.2</mybatis-spring.version>
     </properties>
 
     <profiles>
@@ -178,6 +179,12 @@
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>commons-dbcp</groupId>
+                <artifactId>commons-dbcp</artifactId>
+                <version>${dbcp.version}</version>
+            </dependency>
             <!--工具包 end-->
 
             <!-- mysql驱动 begin-->
@@ -187,6 +194,18 @@
                 <version>${mysql.version}</version>
             </dependency>
             <!-- mysql驱动 end-->
+
+            <!-- MyBatis -->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybatis-spring.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
