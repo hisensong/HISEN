@@ -52,7 +52,7 @@
         </dependency>
         <dependency>
             <groupId>com.dmall</groupId>
-            <artifactId>hisen-domain</artifactId>
+            <artifactId>hisen-db</artifactId>
             <version>1.0.1</version>
         </dependency>
         <dependency>
