@@ -73,8 +73,8 @@
 		<include refid="select-all-column"/>
 		<where>
 		<include refid="where-all-condition"/>
-		<include refid="commonRoadMapper.sortSql"/>
-		<include refid="commonRoadMapper.pagingLimit"/>
+		<!--<include refid="commonRoadMapper.sortSql"/>
+		<include refid="commonRoadMapper.pagingLimit"/>-->
 		</where>
 	</select>
 	

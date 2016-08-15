@@ -36,6 +36,13 @@
             <version>${dbcp.version}</version>
         </dependency>
 
+        <!-- mysql驱动 begin-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+
         <!-- MyBatis -->
         <dependency>
             <groupId>org.mybatis</groupId>
