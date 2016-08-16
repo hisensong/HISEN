@@ -23,7 +23,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="hisen-webapp" />
       </profile>
       <profile default="false" name="Annotation profile for hisen-dao" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -37,28 +36,24 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="hisen-service" />
       </profile>
       <profile default="false" name="Annotation profile for hisen-common" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="hisen-common" />
       </profile>
       <profile default="false" name="Annotation profile for hisen-domain" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="hisen-domain" />
       </profile>
       <profile default="false" name="Annotation profile for hisen-db" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="hisen-db" />
       </profile>
       <profile default="false" name="Annotation profile for hisen-base" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
