@@ -14,4 +14,16 @@
     <artifactId>hisen-common</artifactId>
     <version>1.0.1</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+
+    </dependencies>
+
 </project>
