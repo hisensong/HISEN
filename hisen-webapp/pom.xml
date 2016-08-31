@@ -37,6 +37,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
         </dependency>
 
 
@@ -65,8 +66,6 @@
             <artifactId>hisen-base</artifactId>
             <version>1.0.1</version>
         </dependency>
-
-
 
     </dependencies>
 </project>
