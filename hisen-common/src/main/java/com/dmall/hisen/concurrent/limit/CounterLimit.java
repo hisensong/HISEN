@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
+ * 缓存实现计数器限流
  * Created by : Hisensong
  * Created time:  2016/8/31.
  */
