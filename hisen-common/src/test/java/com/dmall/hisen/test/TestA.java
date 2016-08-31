@@ -18,29 +18,6 @@ public class TestA {
 
     public static void main(String[] args) throws ExecutionException {
 
-        LoadingCache<Long, AtomicLong> counter =
-                CacheBuilder.newBuilder()
-                        .expireAfterWrite(2, TimeUnit.SECONDS)
-                        .build(new CacheLoader<Long, AtomicLong>() {
-                            @Override
-                            public AtomicLong load(Long seconds) throws Exception {
-                                return new AtomicLong(0);
-                            }
-                        });
-        long limit = 1000;
-        while(true) {
-            //得到当前秒
-            long currentSeconds = System.currentTimeMillis() / 1000;
-            System.out.println("currentSeconds==="+currentSeconds);
-            if(counter.get(currentSeconds).incrementAndGet() > limit) {
-                System.out.println("限流了:" + currentSeconds);
-                System.out.println("counter.get(currentSeconds).get()==="+counter.get(currentSeconds).get());
-                break;
-            }else{
-                System.out.println("当前值==="+counter.get(currentSeconds).get());
-            }
-            //业务处理
-        }
 
     }
 }

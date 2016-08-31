@@ -4,3 +4,4 @@ target/
 /.gitignore
 .classpath
 *.iml
+/.idea/
