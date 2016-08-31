@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * Description:
+ * Description:限流某个接口的时间窗请求数
  * Author:HisenSong
  * DateTime: 2016/8/31 19:26
  */
@@ -31,9 +31,13 @@ public class TestA {
         while(true) {
             //得到当前秒
             long currentSeconds = System.currentTimeMillis() / 1000;
+            System.out.println("currentSeconds==="+currentSeconds);
             if(counter.get(currentSeconds).incrementAndGet() > limit) {
                 System.out.println("限流了:" + currentSeconds);
-                continue;
+                System.out.println("counter.get(currentSeconds).get()==="+counter.get(currentSeconds).get());
+                break;
+            }else{
+                System.out.println("当前值==="+counter.get(currentSeconds).get());
             }
             //业务处理
         }
