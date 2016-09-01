@@ -27,5 +27,9 @@ public class TestA {
         System.out.println(cache.get("hisen"));
         System.out.println(cache.get("gome"));
 
+
+
+
+
     }
 }
