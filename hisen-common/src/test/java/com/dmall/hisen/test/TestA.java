@@ -6,8 +6,6 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.util.concurrent.RateLimiter;
 
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * Description:限流某个接口的时间窗请求数
@@ -18,13 +16,16 @@ import java.util.concurrent.atomic.AtomicLong;
 public class TestA {
 
     public static void main(String[] args) throws ExecutionException {
-        RateLimiter limiter = RateLimiter.create(5);
-        System.out.println(limiter.acquire(15));
-        System.out.println(limiter.acquire(1));
-        System.out.println(limiter.acquire(1));
-        System.out.println(limiter.acquire(1));
-        System.out.println(limiter.acquire(1));
-        System.out.println(limiter.acquire(1));
+
+        LoadingCache<String,String> cache = CacheBuilder.newBuilder().build(new CacheLoader<String, String>() {
+            @Override
+            public String load(String key) throws Exception {
+                return "你好:" + key;
+            }
+        });
+
+        System.out.println(cache.get("hisen"));
+        System.out.println(cache.get("gome"));
 
     }
 }

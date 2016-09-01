@@ -16,6 +16,9 @@ import java.util.concurrent.atomic.AtomicLong;
 public class CounterLimit {
     public static void main(String[] args) throws ExecutionException {
 
+        /**
+         * Guava Cache是一个全内存的本地缓存实现，它提供了线程安全的实现机制。整体上来说Guava cache 是本地缓存的不二之选，简单易用，性能好
+         */
         LoadingCache<Long, AtomicLong> counter =
                 CacheBuilder.newBuilder()
                         .expireAfterWrite(2, TimeUnit.SECONDS)
