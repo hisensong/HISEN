@@ -17,15 +17,20 @@ public class TestA {
 
     public static void main(String[] args) throws ExecutionException {
 
-        LoadingCache<String,String> cache = CacheBuilder.newBuilder().build(new CacheLoader<String, String>() {
+        LoadingCache<String,TempEntity> cache = CacheBuilder.newBuilder().build(new CacheLoader<String, TempEntity>() {
             @Override
-            public String load(String key) throws Exception {
-                return "你好:" + key;
+            public TempEntity load(String key) throws Exception {
+                TempEntity tempEntity = new TempEntity();
+                tempEntity.setAge(11);
+                tempEntity.setName(key);
+                tempEntity.setSex("男");
+                return tempEntity;
             }
         });
 
-        System.out.println(cache.get("hisen"));
-        System.out.println(cache.get("gome"));
+
+        System.out.println(cache.get("hisen").toString());
+        System.out.println(cache.get("gome").toString());
 
 
 
