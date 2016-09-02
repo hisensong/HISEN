@@ -12,20 +12,19 @@ import java.util.List;
 /**
  * Description:Redis 操作 service.
  *
- * @author yudong.chang
+ * @author hisensong
  * @version V1.0
  * @since 15-11-24
  */
 @Service("redisService")
 public class RedisServiceImpl implements RedisService {
     @Autowired
-    private static JedisPool jedisPool;
+    private  JedisPool jedisPool;
 
 
     @Override
     public void set(String key, String val) {
         Jedis jedis = null;
-
         try {
             jedis = jedisPool.getResource();
             jedis.set(key,val);
