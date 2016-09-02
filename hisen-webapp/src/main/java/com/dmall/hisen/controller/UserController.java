@@ -1,5 +1,6 @@
 package com.dmall.hisen.controller;
 
+import com.dmall.hisen.cache.RedisService;
 import com.dmall.hisen.domain.User;
 import com.dmall.hisen.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private RedisService redisService;
+
     @ResponseBody
     @RequestMapping(value="/query", method= RequestMethod.GET)
     public User queryUser(){
@@ -33,10 +37,17 @@ public class UserController {
     @ResponseBody
     @RequestMapping(value="/update", method= RequestMethod.GET)
     public User updateUser(){
+        System.out.println("=====" + redisService.getString("userInfo"));
+        if(!StringUtils.isEmpty(redisService.getString("userInfo"))){
+            System.out.println(redisService.getString("userInfo"));
+        }
         User user = new User();
         user.setName("updateUser");
         user.setAge(20);
         user.setSex("男");
+
+        redisService.set("userInfo",user.toString());
+
         return user;
     }
 

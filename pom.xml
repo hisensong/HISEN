@@ -15,6 +15,7 @@
         <module>hisen-common</module>
         <module>hisen-db</module>
         <module>hisen-base</module>
+        <module>hisen-cache</module>
     </modules>
 
     <properties>
