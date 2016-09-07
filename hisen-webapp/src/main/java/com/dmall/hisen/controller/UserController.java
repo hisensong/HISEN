@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * Description:
  * Company:国美小额贷款有限公司
@@ -30,20 +35,15 @@ public class UserController {
     @ResponseBody
     @RequestMapping(value="/query", method= RequestMethod.GET)
     public User queryUser(){
-        //test redis service
-        User user = redisService.getObj(RedisKeyBuild.USER(123),User.class);
-        if(user != null){
-            System.out.println("user.toString()===" + user.toString());
-        }
-
-        if(user == null){
-            user = new User();
-            user.setName("王五");
-            user.setSex("男");
-            user.setAge(45);
-            redisService.setObj(RedisKeyBuild.USER(123),user);
-        }
-
+        //test redis pipelined  service
+        User user = new User();
+        List<Map<String,String>> list = new ArrayList<>();
+        Map<String,String> map = new HashMap<>();
+        map.put("key1","val1");
+        map.put("key2","val2");
+        map.put("key3","val3");
+        list.add(map);
+        redisService.pipelined(list);
         return  user;
     }
 

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 /**
@@ -122,5 +123,15 @@ public class RedisServiceImpl implements RedisService {
     @Override
     public String rpop(String key) {
         return redisClient.rpop(key);
+    }
+
+    @Override
+    public long expire(String key, int seconds) {
+        return redisClient.expire(key,seconds);
+    }
+
+    @Override
+    public long pipelined(List<Map<String,String>> list) {
+        return redisClient.pipelined(list);
     }
 }

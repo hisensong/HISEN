@@ -1,6 +1,7 @@
 package com.dmall.hisen.cache;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Description:
@@ -39,4 +40,8 @@ public interface RedisService {
      void lpush(String key,String... val);
 
      String rpop(String key);
+
+     long  expire(String key, int seconds);
+
+     long pipelined(List<Map<String,String>> list);
 }
