@@ -1,6 +1,7 @@
 package com.dmall.hisen.controller;
 
 import com.dmall.hisen.cache.RedisService;
+import com.dmall.hisen.common.RedisKeyBuild;
 import com.dmall.hisen.domain.User;
 import com.dmall.hisen.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +30,21 @@ public class UserController {
     @ResponseBody
     @RequestMapping(value="/query", method= RequestMethod.GET)
     public User queryUser(){
-        User user = new User();
-        user.setName("王五");
-        return  userService.findOne(user);
+        //test redis service
+        User user = redisService.getObj(RedisKeyBuild.USER(123),User.class);
+        if(user != null){
+            System.out.println("user.toString()===" + user.toString());
+        }
+
+        if(user == null){
+            user = new User();
+            user.setName("王五");
+            user.setSex("男");
+            user.setAge(45);
+            redisService.setObj(RedisKeyBuild.USER(123),user);
+        }
+
+        return  user;
     }
 
     @ResponseBody

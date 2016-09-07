@@ -19,4 +19,8 @@ public class RedisKeyBuild {
         return HISEN_CACHE + "_STUDENT:" + id;
     }
 
+    public static String USER(int id){
+        return HISEN_CACHE + "_USER:" + id;
+    }
+
 }
