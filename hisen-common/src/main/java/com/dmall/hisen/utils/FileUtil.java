@@ -1,9 +1,6 @@
 package com.dmall.hisen.utils;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class FileUtil {
 	//读取文件
@@ -45,5 +42,20 @@ public class FileUtil {
     	   e.printStackTrace();
        }
         
+    }
+
+    public static String readFile(String filename) throws IOException {
+        File file = new File(filename);
+        if (!file.exists() || file.isDirectory())
+            throw new FileNotFoundException();
+        FileInputStream fis = new FileInputStream(file);
+        byte[] buf = new byte[1024];
+        StringBuffer sb = new StringBuffer();
+        while ((fis.read(buf)) != -1) {
+            sb.append(new String(buf));
+            buf = new byte[1024];// 重新生成，避免和上次读取的数据重复
+        }
+        return sb.toString();
+
     }
 }
