@@ -58,6 +58,7 @@
           <element id="archive" name="hisen-cache-1.0.1.jar">
             <element id="module-output" name="hisen-cache" />
           </element>
+          <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.7" />
           <element id="library" level="project" name="Maven: redis.clients:jedis:2.9.0" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-pool2:2.4.2" />
         </element>

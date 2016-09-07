@@ -30,13 +30,13 @@ public interface RedisService {
 
      <T> List<T> getList(String key, Class<T> clazz);
 
-     Long del(String key);
+     Long del(String... key);
 
      Long incr(String key);
 
      Long decr(String key);
 
-     void lpush(String key,String val);
+     void lpush(String key,String... val);
 
      String rpop(String key);
 }
