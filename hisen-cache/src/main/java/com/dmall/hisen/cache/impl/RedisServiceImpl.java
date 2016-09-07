@@ -21,21 +21,11 @@ public class RedisServiceImpl implements RedisService {
     @Autowired
     private  JedisPool jedisPool;
 
+    private Jedis jedis = null;
+
 
     @Override
     public void set(String key, String val) {
-        Jedis jedis = null;
-        try {
-            jedis = jedisPool.getResource();
-            jedis.set(key,val);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            if (jedis != null) {
-                jedis.close();
-            }
-        }
-
 
     }
 
@@ -70,6 +60,7 @@ public class RedisServiceImpl implements RedisService {
         String result = null;
         try {
             jedis = jedisPool.getResource();
+            jedis.auth("hisen");
             result = jedis.get(key);
         } catch (Exception e) {
             e.printStackTrace();
