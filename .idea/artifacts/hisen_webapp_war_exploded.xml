@@ -41,6 +41,7 @@
           </element>
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.1.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.1.7.RELEASE" />
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.7.0" />
           <element id="library" level="project" name="Maven: com.google.guava:guava:17.0" />
           <element id="archive" name="hisen-base-1.0.1.jar">
             <element id="module-output" name="hisen-base" />
