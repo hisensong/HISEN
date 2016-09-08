@@ -4,6 +4,7 @@ import com.dmall.hisen.service.annotation.FruitAnnotation;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
 
 /**
  * Description:
@@ -11,6 +12,7 @@ import org.aspectj.lang.annotation.Aspect;
  * DateTime: 2016/9/8 15:52
  */
 @Aspect
+@Component
 public class BaseAop {
 
     @Around("within(com.dmall.hisen.service..*) &&@annotation(fruit)")

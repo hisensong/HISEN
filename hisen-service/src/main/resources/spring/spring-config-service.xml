@@ -11,7 +11,7 @@
      		http://www.springframework.org/schema/aop/spring-aop-3.2.xsd"
        default-autowire="byName">
 
-    <context:component-scan base-package="com.dmall.hisen.service.impl"/>
+    <context:component-scan base-package="com.dmall.hisen.service"/>
 
     <!--自动扫描被@Aspect标注的切面-->
     <aop:aspectj-autoproxy proxy-target-class="true"/>
