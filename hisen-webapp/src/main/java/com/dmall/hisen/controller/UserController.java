@@ -58,9 +58,24 @@ public class UserController {
         user.setName("updateUser");
         user.setAge(20);
         user.setSex("男");
-
         redisService.set("userInfo",user.toString());
 
+        userService.update(user);
+        return user;
+    }
+
+    /**
+     * 测试aop
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value="/aop", method= RequestMethod.GET)
+    public User aop(){
+        User user = new User();
+        user.setName("updateUser");
+        user.setAge(20);
+        user.setSex("男");
+        userService.update(user);
         return user;
     }
 
