@@ -2,6 +2,7 @@ package com.dmall.hisen.service.impl;
 
 import com.dmall.hisen.domain.User;
 import com.dmall.hisen.service.UserService;
+import com.dmall.hisen.service.annotation.FruitAnnotation;
 import org.springframework.stereotype.Service;
 
 /**
@@ -21,6 +22,7 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
+    @FruitAnnotation("apple")
     public int update(User user) {
         return 1;
     }
