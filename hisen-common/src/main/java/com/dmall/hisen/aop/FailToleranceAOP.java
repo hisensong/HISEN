@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class FailToleranceAOP {
 
-    @Around("within(com.gomejk.gcsp..*) && @annotation(fta)")
+    @Around("within(com.dmall.hisen..*) && @annotation(fta)")
     public Object around(ProceedingJoinPoint jp, FailToleranceAnnotation fta) throws Throwable{
         FailureToleranceStrategyEnum failureToleranceStrategyEnum =  fta.strategy();
         FailureTolerance ft = FailureToleranceFactory.getFailureTolenrance(failureToleranceStrategyEnum);
