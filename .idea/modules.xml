@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/hisen-db/hisen-db.iml" filepath="$PROJECT_DIR$/hisen-db/hisen-db.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-domain/hisen-domain.iml" filepath="$PROJECT_DIR$/hisen-domain/hisen-domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-service/hisen-service.iml" filepath="$PROJECT_DIR$/hisen-service/hisen-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hisen-shiro/hisen-shiro.iml" filepath="$PROJECT_DIR$/hisen-shiro/hisen-shiro.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-webapp/hisen-webapp.iml" filepath="$PROJECT_DIR$/hisen-webapp/hisen-webapp.iml" />
     </modules>
   </component>

@@ -16,6 +16,7 @@
         <module>hisen-db</module>
         <module>hisen-base</module>
         <module>hisen-cache</module>
+        <module>hisen-shiro</module>
     </modules>
 
     <properties>
