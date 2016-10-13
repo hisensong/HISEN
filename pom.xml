@@ -17,7 +17,6 @@
         <module>hisen-base</module>
         <module>hisen-cache</module>
         <module>hisen-shiro</module>
-        <module>hisen-kafka</module>
     </modules>
 
     <properties>
