@@ -81,6 +81,13 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
       </profile>
+      <profile default="false" name="Annotation profile for hisen-dubbo" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="hisen-dubbo" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
       <module name="hisen" target="1.7" />
@@ -89,6 +96,7 @@
       <module name="hisen-common" target="1.7" />
       <module name="hisen-db" target="1.7" />
       <module name="hisen-domain" target="1.7" />
+      <module name="hisen-dubbo" target="1.7" />
       <module name="hisen-kafka" target="1.7" />
       <module name="hisen-service" target="1.7" />
       <module name="hisen-shiro" target="1.7" />
