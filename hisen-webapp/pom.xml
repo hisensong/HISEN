@@ -77,11 +77,11 @@
             <artifactId>hisen-cache</artifactId>
             <version>1.0.1</version>
         </dependency>
-       <!-- <dependency>
+        <dependency>
             <groupId>com.dmall</groupId>
             <artifactId>hisen-dubbo</artifactId>
             <version>1.0.1</version>
-        </dependency>-->
+        </dependency>
 
 
     </dependencies>

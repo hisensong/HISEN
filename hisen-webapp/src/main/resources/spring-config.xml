@@ -25,6 +25,6 @@
 	<import resource="classpath:spring-config-dao.xml"/>
 	<import resource="classpath:spring/spring_redis.xml"/>
 
-<!--	<import resource="classpath:spring/dubbo-provider.xml"/>
-	<import resource="classpath:spring/dubbo-consumer.xml"/>-->
+	<import resource="classpath:spring/dubbo-provider.xml"/>
+	<import resource="classpath:spring/dubbo-consumer.xml"/>
 </beans>
