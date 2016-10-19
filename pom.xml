@@ -17,7 +17,7 @@
         <module>hisen-base</module>
         <module>hisen-cache</module>
         <module>hisen-shiro</module>
-        <module>hisen-dubbo</module>
+      <!--  <module>hisen-dubbo</module>-->
     </modules>
 
     <properties>
