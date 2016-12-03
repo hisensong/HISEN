@@ -17,8 +17,14 @@
         <module>hisen-base</module>
         <module>hisen-cache</module>
         <module>hisen-shiro</module>
-      <!--  <module>hisen-dubbo</module>-->
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.1.7.RELEASE</version>
+        </dependency>
+    </dependencies>
 
     <properties>
         <jdk.version>1.7</jdk.version>

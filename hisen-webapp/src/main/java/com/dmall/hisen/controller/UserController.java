@@ -29,9 +29,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private RedisService redisService;
-
     @ResponseBody
     @RequestMapping(value="/query", method= RequestMethod.GET)
     public User queryUser(){
@@ -43,22 +40,17 @@ public class UserController {
         map.put("key2","val2");
         map.put("key3","val3");
         list.add(map);
-        redisService.pipelined(list);
         return  user;
     }
 
     @ResponseBody
     @RequestMapping(value="/update", method= RequestMethod.GET)
     public User updateUser(){
-        System.out.println("=====" + redisService.getString("userInfo"));
-        if(!StringUtils.isEmpty(redisService.getString("userInfo"))){
-            System.out.println(redisService.getString("userInfo"));
-        }
+
         User user = new User();
         user.setName("updateUser");
         user.setAge(20);
         user.setSex("男");
-        redisService.set("userInfo",user.toString());
 
         userService.update(user);
         return user;
