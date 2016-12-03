@@ -1,7 +1,5 @@
 package com.dmall.hisen.concurrent.queue;
 
-import com.sun.deploy.net.HttpRequest;
-
 import java.util.concurrent.ConcurrentLinkedDeque;
 
 /**
@@ -14,7 +12,7 @@ public class JdkQueue {
 
     public static void main(String[] args){
 
-        ConcurrentLinkedDeque<HttpRequest> concurrentLinkedDeque = new ConcurrentLinkedDeque<>();
+        ConcurrentLinkedDeque<Object> concurrentLinkedDeque = new ConcurrentLinkedDeque<>();
         concurrentLinkedDeque.poll();
 
     }
