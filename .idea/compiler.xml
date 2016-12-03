@@ -60,13 +60,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="hisen-base" />
       </profile>
       <profile default="false" name="Annotation profile for hisen-cache" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="hisen-cache" />
       </profile>
       <profile default="false" name="Annotation profile for hisen-shiro" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -87,6 +87,13 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
       </profile>
+      <profile default="false" name="Annotation profile for shiro" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="shiro" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
       <module name="hisen" target="1.7" />
@@ -100,6 +107,7 @@
       <module name="hisen-service" target="1.7" />
       <module name="hisen-shiro" target="1.7" />
       <module name="hisen-webapp" target="1.7" />
+      <module name="shiro" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
