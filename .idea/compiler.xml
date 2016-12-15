@@ -94,6 +94,13 @@
         <processorPath useClasspath="true" />
         <module name="shiro" />
       </profile>
+      <profile default="false" name="Annotation profile for hisen-task" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="hisen-task" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
       <module name="hisen" target="1.7" />
@@ -106,6 +113,7 @@
       <module name="hisen-kafka" target="1.7" />
       <module name="hisen-service" target="1.7" />
       <module name="hisen-shiro" target="1.7" />
+      <module name="hisen-task" target="1.7" />
       <module name="hisen-webapp" target="1.7" />
       <module name="shiro" target="1.7" />
     </bytecodeTargetLevel>
