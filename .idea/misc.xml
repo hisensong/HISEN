@@ -34,6 +34,7 @@
       <set>
         <option value="$PROJECT_DIR$/hisen-dao/pom.xml" />
         <option value="$PROJECT_DIR$/hisen-kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/hisen-metrics/pom.xml" />
       </set>
     </option>
   </component>
