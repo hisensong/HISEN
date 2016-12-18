@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/hisen-service/hisen-service.iml" filepath="$PROJECT_DIR$/hisen-service/hisen-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-shiro/hisen-shiro.iml" filepath="$PROJECT_DIR$/hisen-shiro/hisen-shiro.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-task/hisen-task.iml" filepath="$PROJECT_DIR$/hisen-task/hisen-task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hisen-task/hisen-task.iml" filepath="$PROJECT_DIR$/hisen-task/hisen-task.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-webapp/hisen-webapp.iml" filepath="$PROJECT_DIR$/hisen-webapp/hisen-webapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-shiro/shiro.iml" filepath="$PROJECT_DIR$/hisen-shiro/shiro.iml" />
     </modules>
