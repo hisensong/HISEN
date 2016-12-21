@@ -66,14 +66,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="hisen-cache" />
       </profile>
       <profile default="false" name="Annotation profile for hisen-shiro" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="hisen-shiro" />
       </profile>
       <profile default="false" name="Annotation profile for hisen-kafka" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -99,7 +97,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="hisen-task" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
