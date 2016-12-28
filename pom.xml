@@ -18,6 +18,7 @@
         <module>hisen-cache</module>
         <module>hisen-shiro</module>
         <module>hisen-task</module>
+        <module>hisen-mq</module>
     </modules>
     <dependencies>
         <dependency>
