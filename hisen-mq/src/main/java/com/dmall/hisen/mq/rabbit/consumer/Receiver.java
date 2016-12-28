@@ -36,8 +36,8 @@ public class Receiver extends BaseConnector implements Runnable,Consumer{
      *    当消费者注册完成自动调用
      */
     @Override
-    public void handleConsumeOk(String s) {
-        System.out.println("Consumer "+s +" registered");
+    public void handleConsumeOk(String consumerTag) {
+        System.out.println("Consumer " + consumerTag + " registered");
     }
 
     /**
