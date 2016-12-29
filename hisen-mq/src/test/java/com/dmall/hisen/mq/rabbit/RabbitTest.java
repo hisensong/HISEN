@@ -10,7 +10,7 @@ import com.dmall.hisen.mq.rabbit.producer.Sender;
  * DateTime: 2016/12/28 16:32
  */
 
-public class Test {
+public class RabbitTest {
 
     public static void main(String[] args) throws Exception{
         Receiver receiver = new Receiver("testQueue");
