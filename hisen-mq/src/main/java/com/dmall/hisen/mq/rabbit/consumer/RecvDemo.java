@@ -21,6 +21,10 @@ public class RecvDemo {
         ConnectionFactory factory = new ConnectionFactory();
         //设置MabbitMQ所在主机ip或者主机名
         factory.setHost("127.0.0.1");
+     /*   factory.setUsername("guest");
+        factory.setPassword("guest");
+        factory.setPort(5672);*/
+
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
         //声明队列，主要为了防止消息接收者先运行此程序，队列还不存在时创建队列。
