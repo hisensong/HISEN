@@ -21,6 +21,7 @@
         <module>hisen-mq</module>
         <module>hisen-dubbo-service-api</module>
         <module>hisen-dubbo-provider</module>
+        <module>hisen-dubbo-consumer</module>
     </modules>
     <dependencies>
         <dependency>

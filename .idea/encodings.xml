@@ -7,6 +7,7 @@
     <file url="file://$PROJECT_DIR$/hisen-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hisen-db" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hisen-domain" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hisen-dubbo-consumer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hisen-dubbo-provider" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hisen-dubbo-service-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hisen-mq" charset="UTF-8" />

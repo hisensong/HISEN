@@ -119,6 +119,13 @@
         <processorPath useClasspath="true" />
         <module name="hisen-dubbo-provider" />
       </profile>
+      <profile default="false" name="Annotation profile for hisen-dubbo-consumer" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="hisen-dubbo-consumer" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
       <module name="hisen" target="1.7" />
@@ -127,6 +134,7 @@
       <module name="hisen-common" target="1.7" />
       <module name="hisen-db" target="1.7" />
       <module name="hisen-domain" target="1.7" />
+      <module name="hisen-dubbo-consumer" target="1.7" />
       <module name="hisen-dubbo-provider" target="1.7" />
       <module name="hisen-dubbo-service-api" target="1.7" />
       <module name="hisen-mq" target="1.7" />
