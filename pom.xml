@@ -19,6 +19,8 @@
         <module>hisen-shiro</module>
         <module>hisen-task</module>
         <module>hisen-mq</module>
+        <module>hisen-dubbo-service-api</module>
+        <module>hisen-dubbo-provider</module>
     </modules>
     <dependencies>
         <dependency>

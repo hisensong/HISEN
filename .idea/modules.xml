@@ -8,6 +8,8 @@
       <module fileurl="file://$PROJECT_DIR$/hisen-common/hisen-common.iml" filepath="$PROJECT_DIR$/hisen-common/hisen-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-db/hisen-db.iml" filepath="$PROJECT_DIR$/hisen-db/hisen-db.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-domain/hisen-domain.iml" filepath="$PROJECT_DIR$/hisen-domain/hisen-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hisen-dubbo-provider/hisen-dubbo-provider.iml" filepath="$PROJECT_DIR$/hisen-dubbo-provider/hisen-dubbo-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hisen-dubbo-service-api/hisen-dubbo-service-api.iml" filepath="$PROJECT_DIR$/hisen-dubbo-service-api/hisen-dubbo-service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-mq/hisen-mq.iml" filepath="$PROJECT_DIR$/hisen-mq/hisen-mq.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-service/hisen-service.iml" filepath="$PROJECT_DIR$/hisen-service/hisen-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/hisen-shiro/hisen-shiro.iml" filepath="$PROJECT_DIR$/hisen-shiro/hisen-shiro.iml" />
