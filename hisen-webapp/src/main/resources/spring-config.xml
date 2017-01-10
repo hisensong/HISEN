@@ -24,6 +24,6 @@
 	<import resource="classpath:spring/spring-config-service.xml"/>
 	<import resource="classpath:spring-config-dao.xml"/>
 <!--	<import resource="classpath:spring/spring_redis.xml"/>-->
-	<import resource="classpath:spring/spring_dubbo.xml"/>
+	<!--<import resource="classpath:spring/spring_dubbo.xml"/>-->
 
 </beans>
