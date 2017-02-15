@@ -15,5 +15,5 @@
     <!-- 用dubbo协议在20880端口暴露服务 -->
     <dubbo:protocol name="dubbo" port="20880" />
     
-	<import resource="spring-dubbo-provider.xml" />
+	<import resource="classpath:spring/spring-dubbo-provider.xml" />
 </beans>
