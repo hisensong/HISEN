@@ -22,6 +22,7 @@
         <module>hisen-dubbo-service-api</module>
         <module>hisen-dubbo-provider</module>
         <module>hisen-dubbo-consumer</module>
+        <module>hisen-elasticsearch</module>
     </modules>
     <dependencies>
         <dependency>
